@@ -7,6 +7,7 @@ RUN set -x; \
 
 WORKDIR /opop
 
+# 建议先把包下载到内网中
 ADD https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.2.1/wkhtmltox-0.12.2.1_linux-centos7-amd64.rpm /opop
 
 RUN echo "2723ce77990f0f10933e48211c0e4f105563e223 wkhtmltox-0.12.2.1_linux-centos7-amd64.rpm" | sha1sum -c -
@@ -31,7 +32,8 @@ CMD [ "/bin/bash", "-c", "source", "/etc/profile" ] \
 RUN echo y | pip uninstall urllib3
 
 # Install Odoo
-# http://nightly.odoo.com/10.0/nightly/rpm/odoo_10.0.20190128.noarch.rpm \
+# http://nightly.odoo.com/10.0/nightly/rpm/odoo_10.0.20190128.noarch.rpm
+# 建议先把包下载到内网中
 RUN wget http://192.168.1.129:8011/package/linux/odoo/odoo_10.0.20190128.noarch.rpm \
     && wget http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/p/python2-psutil-2.2.1-4.el7.x86_64.rpm \
     && mv /usr/lib64/python2.7/site-packages/psutil-2.2.1-py2.7.egg-info{,.bak} \
