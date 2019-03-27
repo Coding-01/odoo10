@@ -38,6 +38,7 @@ https://hub.docker.com/_/odoo
 
 
 运行多个Odoo实例：
+    
     docker run -p 8070:8069 --name odoo2 --link db:db -t odoo
 
     docker run -p 8071:8069 --name odoo3 --link db:db -t odoo
