@@ -7,7 +7,7 @@ RUN set -x; \
 
 WORKDIR /opop
 
-ADD http://192.168.1.129:8011/package/linux/odoo/wkhtmltox-0.12.2.1_linux-centos7-amd64.rpm /opop
+ADD https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.2.1/wkhtmltox-0.12.2.1_linux-centos7-amd64.rpm /opop
 
 RUN echo "2723ce77990f0f10933e48211c0e4f105563e223 wkhtmltox-0.12.2.1_linux-centos7-amd64.rpm" | sha1sum -c -
 RUN yum -y install /opop/wkhtmltox-0.12.2.1_linux-centos7-amd64.rpm \
