@@ -3,6 +3,7 @@ Open Source ERP and CRM
 
 $ cat /etc/centos-release
   CentOS Linux release 7.4.1708 (Core)
+
 $ uname -r
 3.10.0-693.el7.x86_64
 
