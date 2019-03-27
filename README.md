@@ -8,6 +8,7 @@ docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=123456 -e POSTGRES_DB=p
 
 docker run -p 8069:8069 --name odoo -v addons:/usr/lib/python2.7/dist-packages/odoo/addons --link db:db -t odoo:10.0
 注1：--link指的db是PostgreSQL容器的名字
+
 注2：addons为 "上面" 的目录
 
 停止并重新启动Odoo实例:
