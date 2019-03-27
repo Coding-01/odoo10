@@ -32,15 +32,15 @@ https://hub.docker.com/_/odoo
 
 服务器的默认配置文件（/etc/odoo/odoo.conf）可以在启动时使用卷覆盖。 假设您在/path/to/config/odoo.conf中有自定义配置
 
-$ docker run -v /path/to/config:/etc/odoo -p 8069:8069 --name odoo --link db:db -t odoo:10.0
+    docker run -v /path/to/config:/etc/odoo -p 8069:8069 --name odoo --link db:db -t odoo:10.0
 
 容器插件位置：/mnt/extra-addons
 
 
 运行多个Odoo实例：
-$ docker run -p 8070:8069 --name odoo2 --link db:db -t odoo
+    docker run -p 8070:8069 --name odoo2 --link db:db -t odoo
 
-$ docker run -p 8071:8069 --name odoo3 --link db:db -t odoo
+    docker run -p 8071:8069 --name odoo3 --link db:db -t odoo
 
 请注意，为了明确使用邮件和报告功能，当主机和容器端口不同时（例如8070和8069），必须在Odoo中设置设置 - >参数 - >系统参数（需要技术特性），web。 base.url到容器端口（例如127.0.0.1:8069）。
 
