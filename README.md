@@ -23,6 +23,7 @@ https://hub.docker.com/_/odoo
 
 
 停止并重新启动Odoo实例:
+
     docker stop odoo
     
     docker start -a odoo
