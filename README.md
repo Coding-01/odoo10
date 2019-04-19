@@ -13,6 +13,10 @@ $ uname -r
 官网参考：
 https://hub.docker.com/_/odoo
 
+    git clone git@github.com:Coding-01/odoo10.git
+    
+    cd odoo10
+    
     docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=123456 -e POSTGRES_DB=postgres --name db postgres:10
 
     docker run -p 8069:8069 --name odoo -v addons:/usr/lib/python2.7/dist-packages/odoo/addons --link db:db -t odoo:10.0
