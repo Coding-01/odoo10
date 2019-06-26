@@ -67,6 +67,6 @@ http://You_IP:8069
 (创建odoo容器时映射的就是到的8069)
 
 
-效果展示
-html < img src="ERP1.png">
-html < img src="ERP2.png">
+#效果展示
+##![展示图](ERP10.png)
+##![展示图](ERP20.png)
